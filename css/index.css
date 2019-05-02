@@ -134,8 +134,9 @@ html,
 body {
   height: 100%;
 }
-.sub-header-font {
-  font-size: 1.5rem black;
+.flex-even {
+  display: flex;
+  justify-content: space-evenly;
 }
 .container {
   width: 100%;
@@ -144,8 +145,8 @@ body {
 header nav {
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
+  flex-direction: row;
   margin-bottom: 4rem;
   background: black;
 }

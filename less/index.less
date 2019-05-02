@@ -59,16 +59,22 @@ html, body {
 
 // Resume code starts here
 
-// Variables & Mixins
-@important-color: black;
+// Variables
+@main-color: black;
 @content-font-size: 1rem;
 @sub-header-size: 1.5rem;
 @title-font-size: 1.8rem;
 @h1-font: 2.25rem;
 
-.sub-header-font {
-	font-size: @sub-header-size
-	@important-color;
+// Mixins
+.flex-even {
+	display: flex;
+	justify-content: space-evenly;
+}
+.media-query-size {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 
@@ -77,17 +83,25 @@ html, body {
 	margin: 0 auto;
 }
 // Header
+
 header nav {
 	width: 100%;
+	// .flex-even
 	display: flex;
-	flex-direction: row;
 	justify-content: space-evenly;
+	flex-direction: row;
 	margin-bottom: 4rem;
-	background: @important-color;
-	
+	background: @main-color;
+
+	@media(max-width: 500px) {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	  }
+
 	a {
 		font-size: @title-font-size;
-		color: @important-color;
+		color: @main-color;
 		text-align: center;
 		justify-content: center;
 		text-decoration: none;
@@ -98,6 +112,7 @@ header nav {
 // intro content
 
 .container .title-img-card {
+	// .flex-even
 	display: flex;
 	justify-content: space-evenly;
 	border: 2px solid black;
@@ -105,8 +120,16 @@ header nav {
 	margin: 30px 0px;
 	margin-bottom: 50px;
 	margin: auto;
+	@media(max-width: 500px) {
+		display: inline-block;
+		flex-direction: column
+	  }
 	h1 {
 		font-size: 70px;
+
+		@media(max-width: 500px) {
+			font-size: 40px;
+		  }
 	}
 	address {
 		font-size: 1.5rem;
@@ -118,31 +141,37 @@ header nav {
 		}
 	}
 
+
 	.img-div {
 		width: 30%;
+		img {
+			max-width: 300px;
+			margin: 5px 0px;
+			border: 3px solid black;
+		}
 	}
-	.img-div img {
-		max-width: 300px;
-		margin: 5px 0px;
-		border: 3px solid black;
-	}
+
+	 
 	.title-card-content {
-		width: 40%
-		
+		width: 40%	
 	}
-
-
-
 }
 
 // middle content
 
 .middle-content {
 	width: 90%;
+	// .flex-even
 	display: flex;
 	justify-content: space-evenly;
 	margin-bottom: 50px;
 	margin: auto;
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column
+		// width: 80%;
+	  }
 	
 	.mid-item {
 		width: 30%;
@@ -156,12 +185,7 @@ header nav {
 		}
 		ul {
 			line-height: 2.5rem;
-			.description {
-				padding-left: 1rem;
-			}
-		}
-	}
-	
+	}	
 }
 
 // footer
@@ -169,9 +193,9 @@ header nav {
 footer .copywright {
 	width: 100%;
 	height: 17%;
-	background: @important-color;
+	background: @main-color;
 	text-align: center;
 	color: white;
-	margin-top: 25px;
+	margin-top: 35px;
 }
 
