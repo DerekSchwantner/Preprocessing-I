@@ -83,6 +83,8 @@ header nav {
 	flex-direction: row;
 	justify-content: space-evenly;
 	margin-bottom: 4rem;
+	background: @important-color;
+	
 	a {
 		font-size: @title-font-size;
 		color: @important-color;
@@ -90,6 +92,7 @@ header nav {
 		justify-content: center;
 		text-decoration: none;
 		margin: 30px 30px;
+		color: white;
 	}
 }
 // intro content
@@ -135,10 +138,11 @@ header nav {
 // middle content
 
 .middle-content {
-	width: 100%;
+	width: 90%;
 	display: flex;
 	justify-content: space-evenly;
 	margin-bottom: 50px;
+	margin: auto;
 	
 	.mid-item {
 		width: 30%;
@@ -152,23 +156,22 @@ header nav {
 		}
 		ul {
 			line-height: 2.5rem;
+			.description {
+				padding-left: 1rem;
+			}
 		}
 	}
 	
 }
 
-// Lower Content
+// footer
 
-// .lower-content {
-// 	width: 90%;
-// 	display: flex;
-// 	justify-content: space-evenly;
-// 	h2 {
-// 		font-size: @h1-font;
-// 		margin-bottom: 2rem;
-// 	}
-// 	ul {
-// 		line-height: 2.5rem;
-// 	}
-	
-// }
+footer .copywright {
+	width: 100%;
+	height: 17%;
+	background: @important-color;
+	text-align: center;
+	color: white;
+	margin-top: 25px;
+}
+
