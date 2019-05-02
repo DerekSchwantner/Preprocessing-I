@@ -59,6 +59,19 @@ html, body {
 
 // Resume code starts here
 
+// Variables & Mixins
+@important-color: black;
+@content-font-size: 1rem;
+@sub-header-size: 1.5rem;
+@title-font-size: 1.8rem;
+@h1-font: 2.25rem;
+
+.sub-header-font {
+	font-size: @sub-header-size
+	@important-color;
+}
+
+
 .container {
 	width: 100%;
 	margin: 0 auto;
@@ -68,16 +81,94 @@ header nav {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	// justify-content: center;
 	justify-content: space-evenly;
+	margin-bottom: 4rem;
 	a {
-		color: black;
+		font-size: @title-font-size;
+		color: @important-color;
 		text-align: center;
 		justify-content: center;
 		text-decoration: none;
 		margin: 30px 30px;
+	}
+}
+// intro content
+
+.container .title-img-card {
+	display: flex;
+	justify-content: space-evenly;
+	border: 2px solid black;
+	width: 90%;
+	margin: 30px 0px;
+	margin-bottom: 50px;
+	margin: auto;
+	h1 {
+		font-size: 70px;
+	}
+	address {
+		font-size: 1.5rem;
+		justify-content: center;
+		margin-top: 1rem;
+		h3 {
+			margin: 2rem 0rem;
+			font-size: @sub-header-size;
+		}
+	}
+
+	.img-div {
+		width: 30%;
+	}
+	.img-div img {
+		max-width: 300px;
+		margin: 5px 0px;
+		border: 3px solid black;
+	}
+	.title-card-content {
+		width: 40%
 		
 	}
 
+
+
+}
+
+// middle content
+
+.middle-content {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 50px;
+	
+	.mid-item {
+		width: 30%;
+		margin: 30px;
+		h2 {
+			font-size: @h1-font;
+			margin-bottom: 2rem;
+		}
+		p {
+			line-height: 1.5rem;
+		}
+		ul {
+			line-height: 2.5rem;
+		}
+	}
 	
 }
+
+// Lower Content
+
+// .lower-content {
+// 	width: 90%;
+// 	display: flex;
+// 	justify-content: space-evenly;
+// 	h2 {
+// 		font-size: @h1-font;
+// 		margin-bottom: 2rem;
+// 	}
+// 	ul {
+// 		line-height: 2.5rem;
+// 	}
+	
+// }
